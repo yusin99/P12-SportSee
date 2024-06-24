@@ -72,7 +72,7 @@ svg {
 
 main {
   height: 100%;
-  overflow: clip;
+  overflow-y: scroll;
   padding: var(--spacing-medium);
 }
 
