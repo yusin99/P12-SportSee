@@ -1,0 +1,46 @@
+.ss-nav {
+    grid-area: ss-nav;
+    display: flex;
+    align-items: center;
+
+    padding: var(--spacing-medium);
+    background-color: #020203;
+    color: #fff;
+}
+
+.ss-nav nav {
+    margin: auto;
+}
+.ss-nav .ss-menu {
+    display: flex;
+    width: 70%;
+    align-items: center;
+    list-style: none;
+    margin-inline: auto;
+    justify-content: space-between;
+}
+
+.ss-nav .ss-menu-item {
+    font-size: 1.2em;
+}
+
+.ss-nav .logo {
+    height: 3rem;
+}
+
+@media (min-width: 75rem) {
+    .ss-nav {
+        padding: var(--spacing-large);
+    }
+
+    .ss-nav .ss-menu {
+        width: 50%;
+    }
+
+    .ss-nav .ss-menu-item {
+        font-size: 1.5em;
+    }
+    .ss-nav .logo {
+        height: 3.5rem;
+    }
+}
