@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Navigate, useParams } from 'react-router-dom'
 import './home.css'
 import Header from '../components/header/header'
+import Spinner from '../components/spinner/spinner'
 
 
 export default function Home() {
@@ -26,6 +27,10 @@ export default function Home() {
 
     if (pageNotFound) {
         return <Navigate to="/404" />
+    }
+
+    if (pageLoading) {
+        return <Spinner />
     }
 
     return (
