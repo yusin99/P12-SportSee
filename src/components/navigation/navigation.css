@@ -1,5 +1,5 @@
 .ss-nav {
-    grid-area: ss-nav;
+    grid-area: nav;
     display: flex;
     align-items: center;
 
