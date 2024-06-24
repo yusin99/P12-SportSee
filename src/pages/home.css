@@ -1,10 +1,10 @@
 .ss-profile {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
     display: grid;
-    gap: var(--spacing-medium);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-template-rows: auto 1fr auto;
-    margin-inline: auto;
+    gap: var(--spacing-medium);
     width: min(100%, 90rem);
+    margin-inline: auto;
 }
 
 @media (min-width: 75rem) {
@@ -28,7 +28,7 @@
     grid-column: 4 / -1;
 }
 
-.ss-score {
+.score {
     grid-row: 3;
     grid-column: 3 / 4;
 }
