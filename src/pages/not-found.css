@@ -1,0 +1,29 @@
+.ss-not-found {
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    gap: var(--spacing-medium);
+}
+
+.ss-not-found h1 {
+    margin: 0;
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--color-primary);
+}
+
+.ss-not-found p {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.ss-not-found .ss-button {
+    margin-top: var(--spacing-medium);
+    padding: var(--spacing-small) var(--spacing-medium);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    background-color: transparent;
+}
