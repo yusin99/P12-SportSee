@@ -94,7 +94,7 @@ main > * {
   gap: var(--spacing-medium);
 }
 
-.sr-only {
+.ss-sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
