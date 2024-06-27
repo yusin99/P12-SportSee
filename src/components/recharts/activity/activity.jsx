@@ -51,9 +51,7 @@ export default function Activity({ userId = 0 }) {
         fetchData()
     }, [userId])
 
-    // Retrieve session data
     const sessions = getSessionInfo(userActivity)
-    console.log(sessions)
     return (
         <section className="ss-activity">
             <h2>Activité quotidienne</h2>

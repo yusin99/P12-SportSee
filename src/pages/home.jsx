@@ -8,6 +8,7 @@ import Score from './../components/recharts/score/score';
 import KeyDatas from './../components/recharts/data/data';
 import AverageSessions from '../components/recharts/avg-session/avg-session'
 import Performances from './../components/recharts/perfs/perfs';
+import { userService } from '../services/userService'
 
 
 export default function Home() {
@@ -19,8 +20,13 @@ export default function Home() {
         const fetchData = async () => {
             try {
                 setPageLoading(true)
+                const fetchedData = await userService(id)
+                if(!fetchedData){
+                    throw new Error("Invalid ID");
+                }
             } catch (error) {
-                if (error.message === 'User not found') {
+                console.log(error)
+                if(error){
                     setPageNotFound(true)
                 }
             } finally {

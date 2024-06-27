@@ -1,6 +1,7 @@
 import MainComponent from './components/layouts/App'
 import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom'
 import MainPage from './pages/home'
+import Error from './pages/not-found';
 
 export function MyRouter() {
     const myRoutes = createBrowserRouter([
@@ -16,6 +17,14 @@ export function MyRouter() {
                     path: '/user/:id',
                     element: <MainPage />,
                 },
+                {
+                    path: '/404',
+                    element: <Error />,
+                },
+                {
+                    path: '*',
+                    element: <Error />,
+                }
             ],
         },
     ])
