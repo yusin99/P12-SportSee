@@ -1,0 +1,25 @@
+.ss-performance {
+    position: relative;
+    background-color: #282d30;
+    border-radius: var(--radius-small);
+    aspect-ratio: 1 / 1;
+}
+
+.ss-performance h2 {
+    position: absolute;
+    top: var(--spacing-medium);
+    left: var(--spacing-medium);
+    max-width: 152px;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-neutral-0);
+    opacity: 0.5;
+}
+
+@media (min-width: 75rem) {
+    .ss-performance h2 {
+        top: var(--spacing-large);
+        left: var(--spacing-large);
+    }
+}
