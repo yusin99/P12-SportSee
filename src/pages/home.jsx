@@ -10,24 +10,26 @@ import AverageSessions from '../components/recharts/avg-session/avg-session'
 import Performances from './../components/recharts/perfs/perfs';
 import { userService } from '../services/userService'
 
-
 export default function Home() {
     const { id } = useParams()
     const [pageLoading, setPageLoading] = useState(true)
     const [pageNotFound, setPageNotFound] = useState(false)
+    const [apiError, setApiError] = useState(false)
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 setPageLoading(true)
-                const fetchedData = await userService(id)
+                const fetchedData = await userService(Number(id))
                 if(!fetchedData){
-                    throw new Error("Invalid ID");
+                    setPageNotFound(true)
                 }
             } catch (error) {
                 console.log(error)
-                if(error){
+                if(error.message === "Invalid ID"){
                     setPageNotFound(true)
+                } else {
+                    setApiError(true)
                 }
             } finally {
                 setPageLoading(false)
@@ -44,6 +46,9 @@ export default function Home() {
         return <Navigate to="/404" />
     }
 
+    if (apiError) {
+        return <Navigate to="/error" />
+    }
 
     return (
         <main>

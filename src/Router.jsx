@@ -2,6 +2,7 @@ import MainComponent from './components/layouts/App'
 import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom'
 import MainPage from './pages/home'
 import Error from './pages/not-found';
+import PbTechnique from './pages/error';
 
 export function MyRouter() {
     const myRoutes = createBrowserRouter([
@@ -20,6 +21,10 @@ export function MyRouter() {
                 {
                     path: '/404',
                     element: <Error />,
+                },
+                {
+                    path: '/error',
+                    element: <PbTechnique />,
                 },
                 {
                     path: '*',
